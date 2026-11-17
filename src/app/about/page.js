@@ -1,3 +1,5 @@
+import PhotoPopup from "@/components/PhotoPopup";
+
 export default function AboutPage() {
   const mission =
     "GloLink International School Phnom Penh (GIS) provides a high quality internationally based education within a Christian environment for our students. GIS recognizes the unique gifts of intellect, personality, and stature of every individual and welcomes students with diverse backgrounds and experiences to empower them to develop in faith, academics, and character in order to become committed followers of Christ, critical thinkers, creative learners, humble leaders, and contributors to society.";
@@ -56,8 +58,8 @@ export default function AboutPage() {
           </div>
 
           <div className="group overflow-hidden rounded-3xl shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-            <img
-              src="https://images.unsplash.com/photo-1562774053-701939374585?w=1200"
+            <PhotoPopup
+              src="/images/SchoolBuilding.jpg"
               alt="International school building"
               className="h-[320px] w-full object-cover transition duration-500 group-hover:scale-105 md:h-[430px]"
             />
