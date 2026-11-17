@@ -183,7 +183,7 @@ export default function ContactPage() {
                     name="firstName"
                     placeholder="First name"
                     required
-                    className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-[#153d65] focus:ring-2 focus:ring-blue-100"
+                    className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-[#153d65] placeholder:text-slate-400 outline-none transition focus:border-[#153d65] focus:ring-2 focus:ring-blue-100"
                   />
                 </div>
 
@@ -196,7 +196,7 @@ export default function ContactPage() {
                     name="lastName"
                     placeholder="Last name"
                     required
-                    className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-[#153d65] focus:ring-2 focus:ring-blue-100"
+                    className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-[#153d65] placeholder:text-slate-400 outline-none transition focus:border-[#153d65] focus:ring-2 focus:ring-blue-100"
                   />
                 </div>
               </div>
@@ -210,7 +210,7 @@ export default function ContactPage() {
                   name="email"
                   placeholder="Your email address"
                   required
-                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-[#153d65] focus:ring-2 focus:ring-blue-100"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-[#153d65] placeholder:text-slate-400 outline-none transition focus:border-[#153d65] focus:ring-2 focus:ring-blue-100"
                 />
               </div>
 
@@ -239,7 +239,7 @@ export default function ContactPage() {
                   rows="5"
                   placeholder="Write your message here..."
                   required
-                  className="w-full resize-y rounded-xl border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-[#153d65] focus:ring-2 focus:ring-blue-100"
+                  className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-[#153d65] placeholder:text-slate-400 outline-none transition focus:border-[#153d65] focus:ring-2 focus:ring-blue-100"
                 />
               </div>
 

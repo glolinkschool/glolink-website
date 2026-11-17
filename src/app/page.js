@@ -333,7 +333,7 @@ export default function Home() {
                     discover new talents.
                   </p>
                   <a
-                    href="/contact"
+                    href="/school-life"
                     className="inline-block mt-4 text-sm font-semibold text-[#9b174c] hover:underline"
                   >
                     Explore More →
@@ -356,7 +356,7 @@ export default function Home() {
                     Engaging and student-centered learning environments.
                   </p>
                   <a
-                    href="/contact"
+                    href="/school-life"
                     className="inline-block mt-4 text-sm font-semibold text-[#9b174c] hover:underline"
                   >
                     Explore More →
@@ -380,7 +380,7 @@ export default function Home() {
                     families.
                   </p>
                   <a
-                    href="/contact"
+                    href="/school-life"
                     className="inline-block mt-4 text-sm font-semibold text-[#9b174c] hover:underline"
                   >
                     Explore More →
@@ -528,7 +528,10 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-[#153d65]">
                       Our Location
                     </h3>
-                    <p className="text-gray-600 mt-1">Phnom Penh, Cambodia</p>
+                    <p className="text-gray-600 mt-1">
+                      Building 131-1, Oknha Mong Reththy St. (1928), Phnom Penh,
+                      Cambodia
+                    </p>
                   </div>
                 </div>
 
@@ -541,9 +544,7 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-[#153d65]">
                       Call Us
                     </h3>
-                    <p className="text-gray-600 mt-1">
-                      Contact our school office
-                    </p>
+                    <p className="text-gray-600 mt-1">Tel: +855 152 447 57</p>
                   </div>
                 </div>
 
@@ -557,7 +558,7 @@ export default function Home() {
                       Email Us
                     </h3>
                     <p className="text-gray-600 mt-1">
-                      Get in touch with our team
+                      glolinkcambodia@gmail.com
                     </p>
                   </div>
                 </div>
@@ -572,7 +573,7 @@ export default function Home() {
                       Office Hours
                     </h3>
                     <p className="text-gray-600 mt-1">
-                      Please contact us for office hours.
+                      Monday-Friday from 7:30 - 5:00 pm
                     </p>
                   </div>
                 </div>

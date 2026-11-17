@@ -4,21 +4,21 @@ const learningStages = [
     level: "Age 3–5",
     description:
       "A caring and engaging environment where young children develop foundational skills through play, exploration, creativity, and Christian values.",
-    image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=900",
+    image: "/images/students/student3.jpg",
   },
   {
     title: "Primary School",
     level: "Grades 1–6",
     description:
       "Students build strong foundations in English, Mathematics, Science, and other essential subjects while developing confidence, curiosity, and good character.",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=900",
+    image: "/images/students/student8.png",
   },
   {
     title: "Middle School",
     level: "Grades 7–9",
     description:
       "Students strengthen academic knowledge, develop critical thinking, and grow in responsibility, discipline, independence, and Christian character.",
-    image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=900",
+    image: "/images/students/student4.JPG",
   },
 ];
 

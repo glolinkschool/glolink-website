@@ -59,7 +59,7 @@ export default function AboutPage() {
 
           <div className="group overflow-hidden rounded-3xl shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
             <PhotoPopup
-              src="/images/SchoolBuilding.jpg"
+              src="/images/SchoolBuilding_about.jpg"
               alt="International school building"
               className="h-[320px] w-full object-cover transition duration-500 group-hover:scale-105 md:h-[430px]"
             />
@@ -163,8 +163,8 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
           <div className="group overflow-hidden rounded-3xl shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1000"
-              alt="Sample male school principal portrait"
+              src="/images/PrincipalPhoto.jpg"
+              alt="principal portrait"
               className="h-[350px] w-full object-cover object-center transition duration-500 group-hover:scale-105 md:h-[440px]"
             />
           </div>

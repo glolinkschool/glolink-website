@@ -10,6 +10,7 @@ export default function Header() {
   const [isHomeOpen, setIsHomeOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
@@ -27,7 +28,9 @@ export default function Header() {
       lastScrollY = currentScrollY;
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -64,27 +67,28 @@ export default function Header() {
           : "-translate-y-full opacity-0"
       }`}
     >
-      <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-16">
+      {/* HEADER CONTAINER */}
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-4 md:px-12 md:py-3">
         {/* SCHOOL LOGO AND NAME */}
-        <a href="/" className="flex items-center gap-3 md:gap-5">
+        <a href="/" className="flex items-center gap-3 md:gap-4">
           <img
             src="/images/logo/glolink-logo.png"
             alt="GloLink International School Logo"
-            className="h-16 w-16 object-contain md:h-24 md:w-24"
+            className="h-16 w-16 object-contain md:h-20 md:w-20"
           />
 
           <div>
-            <h1 className="text-xl font-bold leading-tight text-[#153d65] md:text-3xl">
+            <h1 className="text-xl font-bold leading-tight text-[#153d65] md:text-2xl">
               GloLink International
             </h1>
-            <p className="text-xl font-bold leading-tight text-[#153d65] md:text-3xl">
+            <p className="text-xl font-bold leading-tight text-[#153d65] md:text-2xl">
               School Phnom Penh
             </p>
           </div>
         </a>
 
         {/* DESKTOP NAVIGATION */}
-        <nav className="hidden items-center gap-8 rounded-2xl bg-white px-8 py-4 text-base font-medium md:flex">
+        <nav className="hidden items-center gap-5 rounded-2xl bg-white px-5 py-3 text-sm font-medium md:flex">
           {/* HOME DROPDOWN */}
           <div className="group relative">
             <a
@@ -93,7 +97,7 @@ export default function Header() {
                 pathname === "/" ? activeClass : normalClass
               }`}
             >
-              Home <span className="ml-1 text-base font-bold">▼</span>
+              Home <span className="ml-1 text-sm font-bold">▼</span>
             </a>
 
             <div className={dropdownClass}>
@@ -120,7 +124,7 @@ export default function Header() {
                 pathname === "/about" ? activeClass : normalClass
               }`}
             >
-              About <span className="ml-1 text-base font-bold">▼</span>
+              About <span className="ml-1 text-sm font-bold">▼</span>
             </a>
 
             <div className={dropdownClass}>
@@ -139,6 +143,7 @@ export default function Header() {
             </div>
           </div>
 
+          {/* ACADEMICS DROPDOWN */}
           <div className="group relative">
             <a
               href="/academic-programs"
@@ -148,7 +153,7 @@ export default function Header() {
                   : normalClass
               }`}
             >
-              Academics <span className="ml-1 text-base font-bold">▼</span>
+              Academics <span className="ml-1 text-sm font-bold">▼</span>
             </a>
 
             <div className={dropdownClass}>
@@ -167,9 +172,10 @@ export default function Header() {
             </div>
           </div>
 
+          {/* CONTACT */}
           <a
             href="/contact"
-            className={`px-3 py-2 transition duration-200 ${
+            className={`rounded-lg px-3 py-2 transition duration-200 ${
               pathname === "/contact" ? activeClass : normalClass
             }`}
           >
@@ -205,9 +211,7 @@ export default function Header() {
               }`}
               aria-expanded={isHomeOpen}
             >
-              <span>
-                Home <span className="ml-1 text-base font-bold"></span>
-              </span>
+              <span>Home</span>
               <span className="text-sm">{isHomeOpen ? "▲" : "▼"}</span>
             </button>
 
@@ -258,9 +262,7 @@ export default function Header() {
               }`}
               aria-expanded={isAboutOpen}
             >
-              <span>
-                About <span className="ml-1 text-base font-bold"></span>
-              </span>
+              <span>About</span>
               <span className="text-sm">{isAboutOpen ? "▲" : "▼"}</span>
             </button>
 
@@ -298,20 +300,20 @@ export default function Header() {
             )}
           </div>
 
-          {/* ACADEMICS */}
+          {/* MOBILE ACADEMICS */}
           <a
             href="/academic-programs"
             onClick={closeMenu}
             className={`${mobileLinkClass} ${
-              pathname === "/academic-programs"
+              pathname.startsWith("/academic-programs")
                 ? "bg-[#eaf3fb] text-[#153d65]"
                 : ""
             }`}
           >
-            Academics <span className="ml-1 text-base font-bold">▼</span>
+            Academics <span className="ml-1 text-sm font-bold">▼</span>
           </a>
 
-          {/* CONTACT */}
+          {/* MOBILE CONTACT */}
           <a
             href="/contact"
             onClick={closeMenu}
