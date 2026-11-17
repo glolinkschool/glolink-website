@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Academics hero animations */
+
+@keyframes academic-float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-22px) translateX(12px);
+  }
+}
+
+@keyframes academic-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes academic-line {
+  from {
+    transform: scaleX(0.4);
+    opacity: 0.5;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.academic-float {
+  animation: academic-float 8s ease-in-out infinite;
+}
+
+.academic-float-delayed {
+  animation: academic-float 10s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.academic-fade-up {
+  animation: academic-fade-up 1s ease-out both;
+}
+
+.academic-fade-up-delay {
+  animation: academic-fade-up 1s ease-out 0.25s both;
+}
+
+.academic-line {
+  animation: academic-line 1.2s ease-out both;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .academic-float,
+  .academic-float-delayed,
+  .academic-fade-up,
+  .academic-fade-up-delay,
+  .academic-line {
+    animation: none;
+  }
+}
