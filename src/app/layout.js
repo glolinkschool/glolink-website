@@ -80,6 +80,36 @@ export const metadata = {
   },
 };
 
+const schoolSchema = {
+  "@context": "https://schema.org",
+  "@type": "School",
+  "@id": "https://gispp.edu.kh/#school",
+  name: "GloLink International School Phnom Penh",
+  alternateName: "GloLink School",
+  url: "https://gispp.edu.kh",
+  logo: "https://gispp.edu.kh/images/logo/glolink-logo.png",
+  image: "https://gispp.edu.kh/images/SchoolBuilding.jpg",
+  description:
+    "GloLink International School Phnom Penh provides Christ-centered K-12 education through the Khmer National Program and International Program.",
+  foundingDate: "2016",
+  slogan: "Learning to lead, Leading to be light!",
+  telephone: "+85515244757",
+  email: "glolinkcambodia@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Building 131-1, Oknha Mong Reththy St. (1928)",
+    addressLocality: "Phnom Penh",
+    addressCountry: "KH",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+85515244757",
+    email: "glolinkcambodia@gmail.com",
+    contactType: "admissions and general inquiries",
+  },
+  sameAs: ["https://t.me/GISPPC"],
+};
+
 export default function RootLayout({ children }) {
   return (
     <html
@@ -87,6 +117,12 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schoolSchema),
+          }}
+        />
         <Header />
         {children}
         <Footer />
