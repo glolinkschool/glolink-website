@@ -1,3 +1,19 @@
+export const metadata = {
+  title: "International Program | Western Australian Curriculum in Phnom Penh",
+  description:
+    "Discover GloLink International School Phnom Penh's International Program, based on the Western Australian Curriculum for Kindergarten to Grade 9, with a focus on academic excellence, Christian values, and character development.",
+  alternates: {
+    canonical: "https://gispp.edu.kh/academic-programs/international-program",
+  },
+  openGraph: {
+    title: "International Program | GloLink International School",
+    description:
+      "Explore our Western Australian Curriculum-based International Program for Kindergarten to Grade 9 at GloLink International School Phnom Penh.",
+    url: "https://gispp.edu.kh/academic-programs/international-program",
+    type: "website",
+  },
+};
+
 const learningStages = [
   {
     title: "Kindergarten",

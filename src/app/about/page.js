@@ -1,4 +1,19 @@
 import PhotoPopup from "@/components/PhotoPopup";
+export const metadata = {
+  title: "About GloLink International School Phnom Penh",
+  description:
+    "Learn about GloLink International School Phnom Penh, established in 2016. Discover our Christian mission, educational vision, school leadership, and commitment to academic excellence.",
+  alternates: {
+    canonical: "https://gispp.edu.kh/about",
+  },
+  openGraph: {
+    title: "About GloLink International School Phnom Penh",
+    description:
+      "Discover GloLink's history, mission, vision, Christian values, and commitment to quality education in Phnom Penh, Cambodia.",
+    url: "https://gispp.edu.kh/about",
+    type: "website",
+  },
+};
 
 export default function AboutPage() {
   const mission =

@@ -1,4 +1,21 @@
 import AcademicTimetable from "@/components/AcademicTimetable";
+
+export const metadata = {
+  title: "Khmer National Program | Kindergarten to Grade 12 in Phnom Penh",
+  description:
+    "Explore the Khmer National Program at GloLink International School Phnom Penh. Following Cambodia's National Curriculum, our program offers Kindergarten to Grade 12 education with Khmer language, English, academic subjects, and Christian values.",
+  alternates: {
+    canonical: "https://gispp.edu.kh/academic-programs/khmer-program",
+  },
+  openGraph: {
+    title: "Khmer National Program | GloLink International School",
+    description:
+      "Discover GloLink's Khmer National Curriculum program, from Kindergarten to Grade 12, in Phnom Penh, Cambodia.",
+    url: "https://gispp.edu.kh/academic-programs/khmer-program",
+    type: "website",
+  },
+};
+
 const gradeLevels = [
   {
     title: "Kindergarten",

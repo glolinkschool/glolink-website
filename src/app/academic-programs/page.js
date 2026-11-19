@@ -1,5 +1,21 @@
 import Link from "next/link";
 import AcademicTimetable from "@/components/AcademicTimetable";
+
+export const metadata = {
+  title: "Academic Programs in Phnom Penh | Khmer & International",
+  description:
+    "Explore GloLink International School Phnom Penh's Khmer National Program (Kindergarten–Grade 12) and International Program (Kindergarten–Grade 9), following the Western Australian Curriculum.",
+  alternates: {
+    canonical: "https://gispp.edu.kh/academic-programs",
+  },
+  openGraph: {
+    title: "Khmer & International Academic Programs | GloLink School",
+    description:
+      "Discover Khmer National and International education programs at GloLink International School Phnom Penh.",
+    url: "https://gispp.edu.kh/academic-programs",
+    type: "website",
+  },
+};
 const programs = [
   {
     title: "Khmer Program",
