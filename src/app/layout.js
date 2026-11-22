@@ -19,13 +19,13 @@ export const metadata = {
   title: {
     default:
       "GloLink International School Phnom Penh | Christ-Centered Education",
-    template: "%s | GloLink School",
+    template: "%s | GloLink International School Phnom Penh",
   },
 
   description:
     "Discover GloLink International School Phnom Penh, providing Christ-centered K-12 education through the International Program and Khmer National Program. Learning to lead, Leading to be light!",
 
-  applicationName: "GloLink International School",
+  applicationName: "GloLink International School Phnom Penh",
 
   icons: {
     icon: "/images/logo/gis_logo_white_bg.png",
@@ -33,14 +33,20 @@ export const metadata = {
 
   keywords: [
     "GloLink International School Phnom Penh",
+    "School in Phnom Penh",
     "International School Phnom Penh",
+    "Christian International School Phnom Penh",
+    "Christian School in Phnom Penh",
     "Private School Phnom Penh",
-    "Christian School Cambodia",
+    "Christian School Phnom Penh Cambodia",
     "Christ-Centered Education",
     "International Education Cambodia",
     "Western Australian Curriculum Cambodia",
+    "Best School in Phnom Penh",
+    "Dual Program School Phnom Penh",
     "Khmer National Program",
     "K-12 Education Phnom Penh",
+    "Christ-Centered K-12 Education",
   ],
 
   authors: [
