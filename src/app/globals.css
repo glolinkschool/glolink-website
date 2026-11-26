@@ -90,3 +90,15 @@ body {
     animation: none;
   }
 }
+
+@font-face {
+  font-family: "Khmer OS Battambang";
+  src: url("/fonts/KhmerOSBattambang.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.khmer-symbol {
+  font-family: "Khmer OS Battambang", sans-serif;
+}

@@ -1,4 +1,5 @@
 import PhotoPopup from "@/components/PhotoPopup";
+import { GraduationCap, Telescope } from "lucide-react";
 export const metadata = {
   title: "About GloLink International School Phnom Penh",
   description:
@@ -106,7 +107,7 @@ export default function AboutPage() {
           <div className="grid gap-8 md:grid-cols-2">
             <div className="group rounded-3xl border border-blue-100 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl md:p-10">
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eaf3fb] text-2xl">
-                🎯
+                <GraduationCap size={28} strokeWidth={1.8} color="#153d65" />
               </div>
 
               <h3 className="mb-5 text-2xl font-bold text-[#153d65] transition group-hover:text-[#9b174c]">
@@ -118,7 +119,7 @@ export default function AboutPage() {
 
             <div className="group rounded-3xl border border-blue-100 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl md:p-10">
               <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eaf3fb] text-2xl">
-                🌟
+                <Telescope size={28} strokeWidth={1.8} color="#153d65" />
               </div>
 
               <h3 className="mb-5 text-2xl font-bold text-[#153d65] transition group-hover:text-[#9b174c]">

@@ -26,6 +26,7 @@ const programs = [
     href: "/academic-programs/khmer-program",
     theme: "bg-[#eaf3fb]",
     symbol: "ក",
+    symbolClass: "khmer-symbol",
     label: "KHMER EDUCATION",
   },
   {
@@ -36,7 +37,7 @@ const programs = [
     grades: "Kindergarten – Grade 9",
     href: "/academic-programs/international-program",
     theme: "bg-[#f8f0ef]",
-    symbol: "A+",
+    symbol: "A",
     label: "INTERNATIONAL EDUCATION",
   },
 ];
@@ -156,7 +157,9 @@ export default function AcademicProgramsPage() {
                   <div className="absolute -bottom-20 -left-10 h-48 w-48 rounded-full bg-[#9b174c]/10"></div>
 
                   <div className="relative flex h-24 w-24 items-center justify-center rounded-3xl border border-white bg-white/80 text-4xl font-bold text-[#9b174c] shadow-md transition duration-300 group-hover:scale-110">
-                    {program.symbol}
+                    <span className={program.symbolClass}>
+                      {program.symbol}
+                    </span>
                   </div>
 
                   <p className="absolute bottom-5 left-6 text-xs font-bold tracking-[0.2em] text-[#153d65]/70">

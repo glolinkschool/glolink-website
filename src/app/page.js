@@ -93,6 +93,14 @@ export default function Home() {
                   className="max-h-24 max-w-full object-contain"
                 />
               </div>
+              {/* Cambridge */}
+              <div className="flex h-36 items-center justify-center rounded-xl bg-white p-6">
+                <img
+                  src="/images/partners/CambridgeLogo.png"
+                  alt="Cambridge"
+                  className="max-h-24 max-w-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </section>

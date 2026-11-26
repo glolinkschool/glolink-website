@@ -1,7 +1,13 @@
 "use client";
 
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { Send } from "lucide-react";
 export default function ContactPage() {
-  const handleSubmit = (e) => {
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState(null);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const form = e.currentTarget;
@@ -10,16 +16,47 @@ export default function ContactPage() {
     const firstName = data.get("firstName");
     const lastName = data.get("lastName");
     const email = data.get("email");
+    const subject = data.get("subject");
     const message = data.get("message");
 
-    const subject = encodeURIComponent(
-      "Website Contact - GloLink International School",
-    );
-    const body = encodeURIComponent(
-      `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`,
-    );
+    const templateParams = {
+      from_name: `${firstName} ${lastName}`.trim(),
+      from_email: email,
+      subject: subject,
+      message: message,
+    };
 
-    window.location.href = `mailto:glolinkcambodia@gmail.com?subject=${subject}&body=${body}`;
+    setIsSending(true);
+    setStatus(null);
+
+    try {
+      await emailjs.send(
+        "service_qvkmswy",
+        "template_dec4z6a",
+        templateParams,
+        {
+          publicKey: "3wn7yHvH4jsTlzNDY",
+        },
+      );
+
+      setStatus({
+        type: "success",
+        message:
+          "Thank you! Your message has been sent successfully. Our team will contact you soon.",
+      });
+
+      form.reset();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+
+      setStatus({
+        type: "error",
+        message:
+          "Sorry, your message could not be sent. Please try again or contact us by email.",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -120,7 +157,7 @@ export default function ContactPage() {
                 className="group flex items-center gap-5 rounded-2xl border border-slate-200 p-5 transition duration-300 hover:-translate-y-1 hover:border-[#153d65] hover:shadow-lg"
               >
                 <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-sky-500 text-2xl text-white">
-                  ✈
+                  <Send size={20} strokeWidth={1.8} />
                 </div>
 
                 <div>
@@ -168,8 +205,8 @@ export default function ContactPage() {
             </h2>
 
             <p className="mb-8 leading-7 text-slate-600">
-              Complete the form below and your email application will open with
-              your message ready to send.
+              Complete the form below and our team will receive your message
+              directly. We look forward to hearing from you.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -245,10 +282,26 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="w-full rounded-full bg-[#153d65] px-6 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#a20d4b] hover:shadow-lg"
+                disabled={isSending}
+                className="w-full rounded-full bg-[#153d65] px-6 py-4 font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#a20d4b] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Send Message <span className="ml-2">→</span>
+                {isSending ? "Sending..." : "Send Message"}
+                {!isSending && <span className="ml-2">→</span>}
               </button>
+
+              {status && (
+                <p
+                  role="status"
+                  aria-live="polite"
+                  className={`mt-4 rounded-xl p-4 text-sm ${
+                    status.type === "success"
+                      ? "bg-green-100 text-green-800"
+                      : "bg-red-100 text-red-800"
+                  }`}
+                >
+                  {status.message}
+                </p>
+              )}
             </form>
           </div>
         </div>

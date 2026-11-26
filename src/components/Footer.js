@@ -1,10 +1,10 @@
+import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-[#08294b] text-white">
       <div className="max-w-7xl mx-auto px-6 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
           {/* School Information */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -16,21 +16,50 @@ export default function Footer() {
               <div>
                 <h2 className="text-2xl font-bold">GloLink</h2>
                 <p className="text-sm">
-                  International School<br />Phnom Penh
+                  International School
+                  <br />
+                  Phnom Penh
                 </p>
               </div>
             </div>
 
             <p className="text-blue-100 leading-relaxed text-sm">
-              A Christ-centered international school that provides
-              quality education, character formation, and a safe,
-              caring environment for every student.
+              A Christ-centered international school that provides quality
+              education, character formation, and a safe, caring environment for
+              every student.
             </p>
 
+            {/* Social Media */}
             <div className="flex gap-3 mt-6">
-              <a href="#" className="w-10 h-10 rounded-full bg-white text-[#08294b] flex items-center justify-center font-bold">f</a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white text-[#08294b] flex items-center justify-center font-bold">▶</a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white text-[#08294b] flex items-center justify-center font-bold">◎</a>
+              <a
+                href="https://www.facebook.com/GISPPC/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GloLink on Facebook"
+                className="w-10 h-10 rounded-full bg-white text-[#08294b] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition duration-300"
+              >
+                <FaFacebookF size={17} />
+              </a>
+
+              <a
+                href="https://www.youtube.com/@GlSPP"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GloLink on YouTube"
+                className="w-10 h-10 rounded-full bg-white text-[#08294b] flex items-center justify-center hover:bg-[#FF0000] hover:text-white transition duration-300"
+              >
+                <FaYoutube size={19} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/glolinkcambodia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GloLink on Instagram"
+                className="w-10 h-10 rounded-full bg-white text-[#08294b] flex items-center justify-center hover:bg-[#E4405F] hover:text-white transition duration-300"
+              >
+                <FaInstagram size={19} />
+              </a>
             </div>
           </div>
 
@@ -39,13 +68,41 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-5">Quick Links</h3>
             <div className="w-16 h-1 bg-[#9b174c] rounded-full mb-5"></div>
             <ul className="space-y-3 text-blue-100 text-sm">
-              <li><a href="/" className="hover:text-white">› Home</a></li>
-              <li><a href="/about" className="hover:text-white">› About GloLink</a></li>
-              <li><a href="/admissions" className="hover:text-white">› Admissions</a></li>
-              <li><a href="/academics" className="hover:text-white">› Academic Programs</a></li>
-              <li><a href="/calendar" className="hover:text-white">› School Calendar</a></li>
-              <li><a href="/news-events" className="hover:text-white">› News & Events</a></li>
-              <li><a href="/contact" className="hover:text-white">› Contact Us</a></li>
+              <li>
+                <a href="/" className="hover:text-white">
+                  › Home
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="hover:text-white">
+                  › About GloLink
+                </a>
+              </li>
+              <li>
+                <a href="/admissions" className="hover:text-white">
+                  › Admissions
+                </a>
+              </li>
+              <li>
+                <a href="/academics" className="hover:text-white">
+                  › Academic Programs
+                </a>
+              </li>
+              <li>
+                <a href="/calendar" className="hover:text-white">
+                  › School Calendar
+                </a>
+              </li>
+              <li>
+                <a href="/news-events" className="hover:text-white">
+                  › News & Events
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-white">
+                  › Contact Us
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -68,9 +125,9 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-5">Get in Touch</h3>
             <div className="w-16 h-1 bg-[#9b174c] rounded-full mb-5"></div>
             <ul className="space-y-5 text-blue-100 text-sm">
-              <li>📍 Phnom Penh, Cambodia</li>
-              <li>☎ Contact our school office</li>
-              <li>✉ Please contact us by email</li>
+              <li>📍 Sen Sok, Phnom Penh, Cambodia</li>
+              <li>☎ +855 152 447 57</li>
+              <li>✉ glolinkcambodia@gmail.com</li>
             </ul>
             <a
               href="/contact"
@@ -79,7 +136,6 @@ export default function Footer() {
               Schedule a Visit →
             </a>
           </div>
-
         </div>
 
         {/* Copyright */}
